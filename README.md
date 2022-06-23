@@ -83,8 +83,9 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
   fallback:
-  - tls://dns.pub
-  - tls://8.8.8.8:853
+  - https://1.1.1.1/dns-query
+  - https://dns.google/dns-query
+  - https://doh.pub/dns-query
 ```
 
 ## 配置守护进程
@@ -126,7 +127,7 @@ $ systemctl start clash
 $ systemctl status clash #查看服务状态
 $ systemctl restart clash #重启服务
 $ systemctl stop clash #关闭服务
-$ journalctl -u clash #查看clash log
+$ journalctl -u clash -f #查看clash log
 ```
 
 # 0x04 使用

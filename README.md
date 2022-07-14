@@ -74,6 +74,7 @@ tun:
   auto-route: true
   auto-detect-interface: false
   dns-hijack:
+    - tcp://any:53
     - any:53
 dns:
   enable: true
@@ -81,13 +82,30 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   listen: 0.0.0.0:53
-  nameserver:
-  - 223.5.5.5
+  default-nameserver:
   - 119.29.29.29
-  fallback:
-  - https://1.1.1.1/dns-query
-  - https://dns.google/dns-query
+  nameserver:
+  - 119.29.29.29
   - https://doh.pub/dns-query
+  fallback:
+  - tls://8.8.4.4
+  - https://doh.pub/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.twitter.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.googleapis.com
+      - +.gvt1.com
 ```
 
 ## 配置守护进程

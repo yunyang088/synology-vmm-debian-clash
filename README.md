@@ -58,10 +58,10 @@ $ shutdown -h now
 
 # 0x03 Clash Premium 
 
->以下操作均以 root 操作（步骤参考 [官方页面说明](https://github.com/Dreamacro/clash/wiki/clash-as-a-daemon)）
->配置的策略为：dns fake-ip，tcp-转发，udp-tun
->auto-redir 为 6.15 后新编译的功能，务必确认版本，文章上方的给的链接可用
->下面给出 `config.yaml` 里相关配置的参考：
+>以下操作均以 root 操作（步骤参考 [官方页面说明](https://github.com/Dreamacro/clash/wiki/clash-as-a-daemon)）  
+>配置的策略为：dns fake-ip，tcp-转发，udp-tun  
+>auto-redir 为 6.15 后新编译的功能，务必确认版本，文章上方的给的链接可用  
+>下面给出 `config.yaml` 里相关配置的参考：  
 
 ## Config 相关
 ```yaml

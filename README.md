@@ -11,10 +11,10 @@
 #  0x01 前期准备
 
 ## Debian
-按D大的说法直接用 testing 的镜像就可以，附上下载地址：[debian-testing-amd64-netinst.iso](https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso)
+直接用 testing 的镜像就可以，附上下载地址：[debian-testing-amd64-netinst.iso](https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso)
 
 ## Clash Premium
-可以直接用 latest，附上下载地址：[clash-linux-amd64-latest.gz](https://release.dreamacro.workers.dev/latest/clash-linux-amd64-latest.gz) 
+clash 官方下载方式因为不可明说的原因已经移除，这里给出一个额外的下载地址,但是否安全请自行斟酌： [clash-linux-amd64-latest.gz](https://mega.nz/folder/ou9jjJhb#IqFnaxXGNNcDZdxArULIeg/file/prlVxaTA)
 
 # 0x02 Debian
 

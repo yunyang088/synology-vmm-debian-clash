@@ -14,7 +14,7 @@
 直接用 testing 的镜像就可以，附上下载地址：[debian-testing-amd64-netinst.iso](https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso)
 
 ## Clash Premium
-clash 官方下载方式因为不可明说的原因已经移除，这里给出一个额外的下载地址,但是否安全请自行斟酌： [clash-linux-amd64-latest.gz](https://mega.nz/folder/ou9jjJhb#IqFnaxXGNNcDZdxArULIeg/file/prlVxaTA)
+clash 官方下载方式因为不可明说的原因已经移除，这里给出一个额外的下载地址，但是否安全请自行斟酌： [clash-linux-amd64-latest.gz](https://mega.nz/folder/ou9jjJhb#IqFnaxXGNNcDZdxArULIeg/file/prlVxaTA)
 
 # 0x02 Debian
 
@@ -50,6 +50,19 @@ $ apt -y install sudo
 ```ini
 net.ipv4.ip_forward=1
 ```
+注意，这里建议执行生效的命令后，检查配置生效情况，debian 的测试版本可能存在不读 sysctl.conf 的情况，需要写入到override中。
+```ini
+sysctl -p
+sysctl -n net.ipv4.ip_forward
+```
+上述命令返回 **1** 则表示成功
+如果不成功的话
+```ini
+cd /etc/sysctl.d
+vi 90-override.conf
+net.ipv4.ip_forward=1 \\写入文件中并保存，重复上述的步骤
+```
+
 保存配置，关机，建快照
 ```bash
 $ sysctl --system
